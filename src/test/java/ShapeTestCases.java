@@ -58,4 +58,20 @@ public class ShapeTestCases {
             assertEquals(10, shape.perimeter());
         }
     }
+
+    @Nested
+    public class SquareAreaTestCases {
+        @Test
+        void toCalculateAreaOfSquareForPositiveSide() {
+            ShapeCalculations shape = new ShapeCalculations(10);
+            assertEquals(100, shape.area());
+        }
+
+        @Test
+        void toCalculateAreaOfSquareForNegativeside() {
+            ShapeCalculations shape = new ShapeCalculations(-10);
+            assertEquals(100, shape.area());
+        }
+    }
+
 }
