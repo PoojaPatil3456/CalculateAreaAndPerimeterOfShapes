@@ -32,4 +32,30 @@ public class ShapeTestCases {
         }
     }
 
+    @Nested
+    public class RectanglePerimeterTestCases {
+        @Test
+        void toCalculatePerimeterOfRectangleForPositiveLengthAndWidth() {
+            ShapeCalculations shape = new ShapeCalculations(10, 5);
+            assertEquals(30, shape.perimeter());
+        }
+
+        @Test
+        void toCalculatePerimeterOfRectangleForNegativeLengthAndWidth() {
+            ShapeCalculations shape = new ShapeCalculations(-10, -5);
+            assertEquals(-30, shape.perimeter());
+        }
+
+        @Test
+        void toCalculatePerimeterOfRectangleForNegativeLengthAndPositiveWidth() {
+            ShapeCalculations shape = new ShapeCalculations(-10, 5);
+            assertEquals(-10, shape.perimeter());
+        }
+
+        @Test
+        void toCalculatePerimeterOfRectangleForPositiveLengthAndNegativeWidth() {
+            ShapeCalculations shape = new ShapeCalculations(10, -5);
+            assertEquals(10, shape.perimeter());
+        }
+    }
 }
