@@ -74,4 +74,19 @@ public class ShapeTestCases {
         }
     }
 
+    @Nested
+    public class SquarePerimeterTestCases {
+        @Test
+        void toCalculatePerimeterOfSquareForPositiveSide() {
+            ShapeCalculations shape = new ShapeCalculations(10);
+            assertEquals(40, shape.perimeter());
+        }
+
+        @Test
+        void toCalculatePerimeterOfSquareForNegativeside() {
+            ShapeCalculations shape = new ShapeCalculations(-10);
+            assertEquals(-40, shape.perimeter());
+        }
+    }
+
 }
